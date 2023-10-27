@@ -78,3 +78,38 @@ EXEC crearCurso 422,'Curso Electronica 2',4,4,4,true ;
 EXEC crearCurso 423,'Curso Electronica 3',8,4,4,false ;
 EXEC crearCurso 424,'Curso Electronica 4',12,4,4,true ;
 EXEC crearCurso 425,'Curso Electronica 5',16,4,4,true ;
+
+EXEC habilitarCurso 103, '1S', 2 , 110, 'B' ; --correcto
+EXEC habilitarCurso 103, '2S', 2 , 110, 'B' ; --correcto
+EXEC habilitarCurso 796, '1S', 3 , 110, 'C' ; --correcto
+-- AGREGAR HORARIO
+EXEC agregarHorario 1, 3 ,'9:00-10:40'; -- correcto
+EXEC agregarHorario 2, 4, '8:00-9:00';	-- errror
+EXEC agregarHorario 3, 4, '8:00-9:00';
+
+-- ASIGNAR CURSO
+EXEC asignarCurso 770, '1S', 'C', 202000002;
+EXEC asignarCurso 796, '1S', 'B', 201710160; --
+EXEC asignarCurso 770, '1S', 'A', 202000003;
+EXEC asignarCurso 103, '1S', 'A', 202000001;
+
+-- DESASIGNACION
+EXEC desasignarCurso 770, '1S', 'C', 202000002;
+
+-- NOTAS
+EXEC ingresarNota 103, '1S', 'A', 201901073, -60.7;
+EXEC ingresarNota 103, '1S', 'A', 201901074, 60.7;
+EXEC ingresarNota 103, '1S', 'A', 201901077, 100;
+
+EXEC ingresarNota 103, '1S', 'A', 201901083, 20;
+
+-- ACTAS
+EXEC addActasCurso(103, '1S', 'A');
+-- CONSULTAS PENSUM
+EXEC consultarPensum 3 ;
+-- CONSULTA ESTUDIANTE
+EXEC consultarEstudiante 202000001 ;
+EXEC consultarDocente 1 ;
+-- id_curso, ciclo, año, seccion
+EXEC consultarAsignados 103, '2S',2023, 'B';
+
