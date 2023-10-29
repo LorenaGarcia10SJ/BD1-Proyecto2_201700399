@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DESASIGNACION CURSO HABILITAR CURSO FK" directorySegmentName="seg_0" id="D6B3B790-BDAA-2E4C-12F2-1797EB7C744C">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 06:39:01 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<sourcePk>2A482A02-60DC-C450-5346-C446C86A5B9A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6D5B309D-1708-B7B7-D922-C0346DFB1321</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FB0C3DA8-05D5-50D2-AC1C-77F38AF5D2FB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

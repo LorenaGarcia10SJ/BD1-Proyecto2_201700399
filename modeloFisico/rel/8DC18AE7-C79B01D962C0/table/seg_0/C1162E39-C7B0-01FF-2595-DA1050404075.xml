@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C1162E39-C7B0-01FF-2595-DA1050404075" name="ASIGNADOS">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>B6C53EA8-9B76-E326-C36E-C240BB62D371</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_asignados" id="0528A35E-A06F-9A28-D02A-787502F9E786">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>393F0891-50D8-8907-11CA-96237E38FD85</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HABILITAR_CURSO_id_habilitar_curso" id="98AEC4A3-3D5A-987F-8434-F737DE85B21F">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>1F206FE6-EC91-FB53-7B82-FC56993BCA48</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F44D88D2-446C-B74D-A9F8-5ADDD328C3AE" referredColumn="BAEBFFA7-CEAF-ADAD-8F84-E927F984760D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A3783C9B-0F90-ECFF-81A0-01EC2065D28D" name="ASIGNADOS_PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>6DFC68C0-FDA3-1932-4241-D97CDCC4378C</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0528A35E-A06F-9A28-D02A-787502F9E786"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62106D28-1FA7-03B7-0CEC-2DEB0FE366F0" name="ASIGNADOS_HABILITAR_CURSO_FK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>E5DBF75F-69A7-50C5-F312-ABFCF3846EB1</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98AEC4A3-3D5A-987F-8434-F737DE85B21F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

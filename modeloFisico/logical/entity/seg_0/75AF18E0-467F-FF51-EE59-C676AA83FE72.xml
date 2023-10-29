@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="75AF18E0-467F-FF51-EE59-C676AA83FE72" name="CARRERA">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:42:35 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id carrera" id="301BC289-D956-7310-202C-A194C0E89207">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:03:02 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="649F2565-BD10-2FBA-DAF7-0C73E6F92DDE">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:03:29 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A7DF083A-2C3D-2352-C3F7-35996E51E10F" name="CARRERA PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:03:25 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>301BC289-D956-7310-202C-A194C0E89207</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

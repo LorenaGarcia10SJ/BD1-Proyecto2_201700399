@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18FD6338-56CD-999B-120C-D5913BFD2875" name="DESASIGNACION_CURSO">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>FB0C3DA8-05D5-50D2-AC1C-77F38AF5D2FB</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_desasignacion" id="363E6B3B-87CC-EB86-1049-8D615F153D7D">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>300C123B-4E3E-CFE3-A479-702970B2B2A7</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_curso" id="689305D9-9CAE-49B6-E949-DD76F7CD79C6">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>26E6D13D-1052-86B9-A2DE-2CEC8DF7AC71</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ciclo" id="B4936B7A-DEA3-9215-A23E-010EEE5869CD">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>7BDD3846-5F4A-EDB5-1378-1C57C2C1145B</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="8D5763F9-6D02-B27D-9118-CBA9E9E96818">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>E658703A-BD82-D10C-3CBE-12B14EAA7AF6</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="carnet" id="3875C0AA-AED5-304D-83EB-7726F3C4750A">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>53FF15D3-7F4F-B1E2-B532-7DE7577F0CFB</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HABILITAR_CURSO_id_habilitar_curso" id="7382C01C-953D-ACD8-91FD-B124E7995CDD">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>EFB84C8B-B57D-00C4-9A1C-DAF514455783</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="204E24C8-A7D0-0A2B-1E21-F957BC363454" referredColumn="BAEBFFA7-CEAF-ADAD-8F84-E927F984760D"/>
+</associations>
+</Column>
+<Column name="ESTUDIANTE_carnet" id="E24504FF-2E24-490A-94CC-FA3537AC0DE8">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>023DDFEE-EBCF-792D-E43C-979BDA35D4F1</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA548DB5-7AD1-ACE5-1EFA-37D15EE9BF79" referredColumn="CBDAD4CB-F8E0-430A-ADAA-FC3862E559C8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1ED97F96-65CD-B04C-DDB8-CE658D8BE47C" name="DESASIGNACION_CURSO_PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>14CA2A82-BA17-2AB5-50D8-9D324B712A86</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="363E6B3B-87CC-EB86-1049-8D615F153D7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FE7123B-631F-2E64-09DB-C9B0479C11B9" name="DESASIGNACION_CURSO_HABILITAR_CURSO_FK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>D6B3B790-BDAA-2E4C-12F2-1797EB7C744C</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7382C01C-953D-ACD8-91FD-B124E7995CDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6FDDF8B-971E-7EF6-380E-149CD9C73DAB" name="DESASIGNACION_CURSO_ESTUDIANTE_FK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 07:05:42 UTC</createdTime>
+<generatorID>30592F3C-F96A-5F1A-9EF3-891CC4FAD112</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E24504FF-2E24-490A-94CC-FA3537AC0DE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

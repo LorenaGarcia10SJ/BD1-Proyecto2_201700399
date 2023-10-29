@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FB0C3DA8-05D5-50D2-AC1C-77F38AF5D2FB" name="DESASIGNACION CURSO">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:33:52 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id desasignacion" id="300C123B-4E3E-CFE3-A479-702970B2B2A7">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:34:05 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id curso" id="26E6D13D-1052-86B9-A2DE-2CEC8DF7AC71">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:34:19 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ciclo" id="7BDD3846-5F4A-EDB5-1378-1C57C2C1145B">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:34:35 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seccion" id="E658703A-BD82-D10C-3CBE-12B14EAA7AF6">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:34:53 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="carnet" id="53FF15D3-7F4F-B1E2-B532-7DE7577F0CFB">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:35:06 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="HABILITAR CURSO id habilitar curso" id="EFB84C8B-B57D-00C4-9A1C-DAF514455783">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 06:39:01 UTC</createdTime>
+<generatorID>D6B3B790-BDAA-2E4C-12F2-1797EB7C744C</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<referedAttribute>4C8F3509-337B-48B7-256D-7BA9A55FF193</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ESTUDIANTE carnet" id="023DDFEE-EBCF-792D-E43C-979BDA35D4F1">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 06:54:38 UTC</createdTime>
+<generatorID>30592F3C-F96A-5F1A-9EF3-891CC4FAD112</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<referedAttribute>53F4EA75-93BC-078B-38DF-854D69B0E65B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="14CA2A82-BA17-2AB5-50D8-9D324B712A86" name="DESASIGNACION_CURSO_PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:34:18 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>300C123B-4E3E-CFE3-A479-702970B2B2A7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

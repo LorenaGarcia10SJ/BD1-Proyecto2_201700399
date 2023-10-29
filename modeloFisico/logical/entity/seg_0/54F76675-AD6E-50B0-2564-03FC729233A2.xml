@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="54F76675-AD6E-50B0-2564-03FC729233A2" name="ESTUDIANTE">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:21:34 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="carnet" id="53F4EA75-93BC-078B-38DF-854D69B0E65B">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:21:49 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombres" id="77F685AD-9C54-6BFE-46F6-0F507FF8AE51">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:33:01 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellidos" id="B43A1193-5B66-394A-A9EB-87CFDAD35F2B">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:35:59 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha nac" id="CFEDB489-7F2F-4712-51AA-3F47807265A2">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:37:10 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="52871B20-3396-9A4D-6239-BEF80EBBC2CC">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:37:32 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="63F483F6-148F-4238-A53A-6EE5C93F8625">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:37:54 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="5275D365-CA57-A22C-28C1-EC6B3CBB6C44">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:38:32 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dpi" id="6FAA022E-DCF3-F0E3-E4A9-13DB14BEFC94">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:39:33 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id carrera1" id="68A38A0E-599A-901F-A366-66437B5127AF">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:39:47 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditos" id="DC959932-F7B7-4737-4912-F51321729072">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:41:45 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha creacion" id="8AA85664-D5B2-EADC-F60C-71562581879D">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:42:02 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CARRERA id carrera" id="4FD22A10-EFC0-EECA-F5C1-378B13F39A8C">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:53:33 UTC</createdTime>
+<generatorID>6A34FA49-03C1-C5DA-2F65-1491853C60CD</generatorID>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<referedAttribute>301BC289-D956-7310-202C-A194C0E89207</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FB41738F-CE46-9D3E-45C4-9CED9DEFDB6D" name="ESTUDIANTE PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 04:25:55 UTC</createdTime>
+<ownerDesignName>modeloFisico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>53F4EA75-93BC-078B-38DF-854D69B0E65B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
