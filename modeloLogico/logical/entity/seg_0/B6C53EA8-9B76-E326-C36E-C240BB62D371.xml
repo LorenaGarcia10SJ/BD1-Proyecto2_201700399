@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B6C53EA8-9B76-E326-C36E-C240BB62D371" name="ASIGNADOS">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:25:09 UTC</createdTime>
+<ownerDesignName>modeloLogico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_asignados" id="393F0891-50D8-8907-11CA-96237E38FD85">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:25:19 UTC</createdTime>
+<ownerDesignName>modeloLogico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_habilitar_curso" id="1F206FE6-EC91-FB53-7B82-FC56993BCA48">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 06:23:11 UTC</createdTime>
+<generatorID>E5DBF75F-69A7-50C5-F312-ABFCF3846EB1</generatorID>
+<ownerDesignName>modeloLogico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<referedAttribute>4C8F3509-337B-48B7-256D-7BA9A55FF193</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6DFC68C0-FDA3-1932-4241-D97CDCC4378C" name="ASIGNADOS PK">
+<createdBy>logas</createdBy>
+<createdTime>2023-10-29 05:25:35 UTC</createdTime>
+<ownerDesignName>modeloLogico</ownerDesignName>
+<engineerTo>
+<item key="8DC18AE7-D4EF-0A1C-E713-C79B01D962C0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>393F0891-50D8-8907-11CA-96237E38FD85</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
