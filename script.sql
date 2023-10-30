@@ -1,106 +1,96 @@
 
-CREATE DATABASE proyecto2;
+CREATE DATABASE prueba;
+USE prueba;
 
-use proyecto2;
-
-CREATE TABLE ACTA 
-    (
-     id_acta INTEGER NOT NULL , 
+-- TABLA HISTORIAL
+CREATE TABLE Historial (
+	id_historial INTEGER IDENTITY(1,1) NOT NULL , 
+	fecha DATE NOT NULL,
+	descripcion VARCHAR(50) NOT NULL,
+	tipo VARCHAR(50) NOT NULL,
+	PRIMARY KEY ( id_historial ) 
+)
+;
+-- TABLA Acta
+CREATE TABLE Acta (
+     id_acta INTEGER IDENTITY(1,1) NOT NULL , 
      id_curso INTEGER NOT NULL , 
      ciclo VARCHAR (2) NOT NULL , --- 1S 2S VJ VD 
      seccion VARCHAR (1) NOT NULL , 
-     fecha_creacion DATE NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL 
+     fecha_creacion DATETIME NOT NULL , 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL 
 );
-
-ALTER TABLE ACTA ADD CONSTRAINT ACTA_PK PRIMARY KEY CLUSTERED (id_acta)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_acta  (incremental)
+ALTER TABLE Acta ADD CONSTRAINT Acta_PK PRIMARY KEY CLUSTERED (id_acta)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE ASIGNACION_CURSO 
-    (
-     id_asignacion_curso INTEGER NOT NULL , 
+-- TABLA AsignacionCurso
+CREATE TABLE AsignacionCurso (
+     id_asignacion INTEGER IDENTITY(1,1) NOT NULL , 
      id_curso INTEGER NOT NULL , 
      ciclo VARCHAR (2) NOT NULL , --- 1S 2S VJ VD
      seccion VARCHAR (1) NOT NULL , 
      carnet BIGINT NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL , 
-     ESTUDIANTE_carnet BIGINT NOT NULL 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL , 
+     Estudiante_carnet BIGINT NOT NULL 
     )
 ;
-
-ALTER TABLE ASIGNACION_CURSO ADD CONSTRAINT ASIGNACION_CURSO_PK PRIMARY KEY CLUSTERED (id_asignacion_curso)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_asignacion (incremental)
+ALTER TABLE AsignacionCurso ADD CONSTRAINT AsignacionCurso_PK PRIMARY KEY CLUSTERED (id_asignacion)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE ASIGNADOS 
-    (
-     id_asignados INTEGER NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL 
+-- TABLA AsignadosDetalle
+CREATE TABLE AsignadosDetalle (
+     id_asignados INTEGER IDENTITY(1,1) NOT NULL , 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL 
     )
 ;
-
-ALTER TABLE ASIGNADOS ADD CONSTRAINT ASIGNADOS_PK PRIMARY KEY CLUSTERED (id_asignados)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_asignados  (incremental)
+ALTER TABLE AsignadosDetalle ADD CONSTRAINT AsignadosDetalle_PK PRIMARY KEY CLUSTERED (id_asignados)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE CARRERA 
-    (
-     id_carrera INTEGER NOT NULL , 
+-- TABLA Carrera
+CREATE TABLE Carrera (
+     id_carrera INTEGER IDENTITY(0,1) NOT NULL , 
      nombre VARCHAR (50) NOT NULL 
     )
 ;
-
-ALTER TABLE CARRERA ADD CONSTRAINT CARRERA_PK PRIMARY KEY CLUSTERED (id_carrera)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_carrera (incremental)
+ALTER TABLE Carrera ADD CONSTRAINT Carrera_PK PRIMARY KEY CLUSTERED (id_carrera)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE CURSO 
-    (
+-- TABLA Curso
+CREATE TABLE Curso (
      id_curso INTEGER NOT NULL , 
      nombre VARCHAR (50) NOT NULL , 
      cre_necesarios INTEGER NOT NULL , 
      cre_otorga INTEGER NOT NULL , 
      id_carrera INTEGER NOT NULL , 
      obligatorio BIT NOT NULL , 
-     CARRERA_id_carrera INTEGER NOT NULL 
+     Carrera_id_carrera INTEGER NOT NULL 
     )
 ;
-
-ALTER TABLE CURSO ADD CONSTRAINT CURSO_PK PRIMARY KEY CLUSTERED (id_curso)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_curso
+ALTER TABLE Curso ADD CONSTRAINT Curso_PK PRIMARY KEY CLUSTERED (id_curso)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE DESASIGNACION_CURSO 
-    (
-     id_desasignacion INTEGER NOT NULL , 
+-- TABLA Desasignacion
+CREATE TABLE Desasignacion (
+     id_desasignacion INTEGER IDENTITY(1,1) NOT NULL , 
      id_curso INTEGER NOT NULL , 
      ciclo VARCHAR (2) NOT NULL ,  --- 1S 2S VJ VD
      seccion VARCHAR (1) NOT NULL , 
      carnet BIGINT NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL , 
-     ESTUDIANTE_carnet BIGINT NOT NULL 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL , 
+     Estudiante_carnet BIGINT NOT NULL 
     )
 ;
-
-ALTER TABLE DESASIGNACION_CURSO ADD CONSTRAINT DESASIGNACION_CURSO_PK PRIMARY KEY CLUSTERED (id_desasignacion)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_desasignación (incremental)
+ALTER TABLE Desasignacion ADD CONSTRAINT Desasignacion_PK PRIMARY KEY CLUSTERED (id_desasignacion)
+     WITH ( ALLOW_PAGE_LOCKS = ON ,  ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE DOCENTE 
-    (
+-- TABLA Docente
+CREATE TABLE Docente (
      nombres VARCHAR (50) NOT NULL , 
      apellidos VARCHAR (50) NOT NULL , 
      fecha_nac DATE NOT NULL , 
@@ -112,15 +102,12 @@ CREATE TABLE DOCENTE
      fecha_creacion DATE NOT NULL 
     )
 ;
-
-ALTER TABLE DOCENTE ADD CONSTRAINT DOCENTE_PK PRIMARY KEY CLUSTERED (siif)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- lave primaria -> siif 
+ALTER TABLE Docente ADD CONSTRAINT Docente_PK PRIMARY KEY CLUSTERED (siif)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE ESTUDIANTE 
-    (
+-- TABLA Estudiante 
+CREATE TABLE Estudiante (
      carnet BIGINT NOT NULL , 
      nombres VARCHAR (50) NOT NULL , 
      apellidos VARCHAR (50) NOT NULL , 
@@ -132,238 +119,137 @@ CREATE TABLE ESTUDIANTE
      id_carrera INTEGER NOT NULL , 
      creditos INTEGER NOT NULL , 
      fecha_creacion DATE NOT NULL , 
-     CARRERA_id_carrera INTEGER NOT NULL 
+     Carrera_id_carrera INTEGER NOT NULL 
     )
 ;
-
-ALTER TABLE ESTUDIANTE ADD CONSTRAINT ESTUDIANTE_PK PRIMARY KEY CLUSTERED (carnet)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> carnet 
+ALTER TABLE Estudiante ADD CONSTRAINT Estudiante_PK PRIMARY KEY CLUSTERED (carnet)
+     WITH (  ALLOW_PAGE_LOCKS = ON ,  ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE HABILITAR_CURSO 
-    (
-     id_habilitar INTEGER NOT NULL , 
+-- TABLA HabilitarCurso
+CREATE TABLE HabilitarCurso (
+     id_habilitar INTEGER IDENTITY(1,1) NOT NULL , 
      id_curso INTEGER NOT NULL , 
      ciclo VARCHAR (2) NOT NULL ,  --- 1S 2S VJ VD
-     id_docente INTEGER NOT NULL , 
+	 Docente_siif INTEGER NOT NULL ,
      cupo INTEGER NOT NULL , 
      seccion VARCHAR (1) NOT NULL , 
      anio VARCHAR (4) NOT NULL , 
      id_asignados INTEGER NOT NULL , 
-     CURSO_id_curso INTEGER NOT NULL , 
-     DOCENTE_siif INTEGER NOT NULL 
+     Curso_id_curso INTEGER NOT NULL 
     )
 ;
-
-ALTER TABLE HABILITAR_CURSO ADD CONSTRAINT HABILITAR_CURSO_PK PRIMARY KEY CLUSTERED (id_habilitar)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_habilitar (incremental)
+ALTER TABLE HabilitarCurso ADD CONSTRAINT HabilitarCurso_PK PRIMARY KEY CLUSTERED (id_habilitar)
+     WITH ( ALLOW_PAGE_LOCKS = ON ,  ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE HORARIO 
-    (
-     id_horario INTEGER NOT NULL , 
-     id_curso_habilitado INTEGER NOT NULL , 
+-- TABLA Horario
+CREATE TABLE Horario (
+     id_horario INTEGER IDENTITY(1,1) NOT NULL , 
+     id_habilitar INTEGER NOT NULL , 
      dia INTEGER NOT NULL , 
      horario VARCHAR (50) NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL 
     )
 ;
-
-ALTER TABLE HORARIO ADD CONSTRAINT HORARIO_PK PRIMARY KEY CLUSTERED (id_horario)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_horario (incremental)
+ALTER TABLE Horario ADD CONSTRAINT Horario_PK PRIMARY KEY CLUSTERED (id_horario)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-CREATE TABLE NOTA 
-    (
-     id_nota INTEGER NOT NULL , 
+-- TABLA Nota
+CREATE TABLE Nota (
+     id_nota INTEGER IDENTITY(1,1) NOT NULL , 
      id_curso INTEGER NOT NULL , 
      ciclo VARCHAR (2) NOT NULL ,  --- 1S 2S VJ VD
      seccion VARCHAR (1) NOT NULL , 
      carnet BIGINT NOT NULL , 
      nota DECIMAL (28) NOT NULL , 
      anio VARCHAR (4) NOT NULL , 
-     HABILITAR_CURSO_id_habilitar INTEGER NOT NULL , 
-     ESTUDIANTE_carnet BIGINT NOT NULL 
+     HabilitarCurso_id_habilitar INTEGER NOT NULL , 
+     Estudiante_carnet BIGINT NOT NULL 
     )
 ;
-
-ALTER TABLE NOTA ADD CONSTRAINT NOTA_PK PRIMARY KEY CLUSTERED (id_nota)
-     WITH (
-     ALLOW_PAGE_LOCKS = ON , 
-     ALLOW_ROW_LOCKS = ON )
+-- llave primaria -> id_nota (incremental)
+ALTER TABLE Nota ADD CONSTRAINT Nota_PK PRIMARY KEY CLUSTERED (id_nota)
+     WITH ( ALLOW_PAGE_LOCKS = ON , ALLOW_ROW_LOCKS = ON )
 ;
-
-ALTER TABLE ACTA 
-    ADD CONSTRAINT ACTA_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-     id_habilitar
-    ) 
+-- agrega relacion de tablas -> llaves foraneas
+ALTER TABLE Acta ADD CONSTRAINT Acta_HabilitarCurso_FK FOREIGN KEY ( HabilitarCurso_id_habilitar ) 
+    REFERENCES HabilitarCurso ( id_habilitar ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE ASIGNACION_CURSO 
-    ADD CONSTRAINT ASIGNACION_CURSO_ESTUDIANTE_FK FOREIGN KEY 
-    ( 
-     ESTUDIANTE_carnet
-    ) 
-    REFERENCES ESTUDIANTE 
-    ( 
-     carnet 
-    ) 
+ALTER TABLE AsignacionCurso ADD CONSTRAINT AsignacionCurso_Estudiante_FK FOREIGN KEY (  Estudiante_carnet ) 
+    REFERENCES Estudiante ( carnet ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE ASIGNACION_CURSO 
-    ADD CONSTRAINT ASIGNACION_CURSO_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-     id_habilitar 
-    ) 
+ALTER TABLE AsignacionCurso ADD CONSTRAINT AsignacionCurso_HabilitarCurso_FK FOREIGN KEY ( HabilitarCurso_id_habilitar ) 
+    REFERENCES HabilitarCurso ( id_habilitar ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE ASIGNADOS 
-    ADD CONSTRAINT ASIGNADOS_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-     id_habilitar
-    ) 
+ALTER TABLE AsignadosDetalle ADD CONSTRAINT AsignadosDetalle_HabilitarCurso_FK FOREIGN KEY ( HabilitarCurso_id_habilitar ) 
+    REFERENCES HabilitarCurso ( id_habilitar ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE CURSO 
-    ADD CONSTRAINT CURSO_CARRERA_FK FOREIGN KEY 
-    ( 
-     CARRERA_id_carrera
-    ) 
-    REFERENCES CARRERA 
-    ( 
-     id_carrera 
-    ) 
+ALTER TABLE Curso ADD CONSTRAINT Curso_Carrera_FK FOREIGN KEY ( Carrera_id_carrera ) 
+    REFERENCES Carrera ( id_carrera ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE DESASIGNACION_CURSO 
-    ADD CONSTRAINT DESASIGNACION_CURSO_ESTUDIANTE_FK FOREIGN KEY 
-    ( 
-     ESTUDIANTE_carnet
-    ) 
-    REFERENCES ESTUDIANTE 
-    ( 
-     carnet 
-    ) 
+ALTER TABLE Desasignacion ADD CONSTRAINT Desasignacion_Estudiante_FK FOREIGN KEY ( Estudiante_carnet ) 
+    REFERENCES Estudiante ( carnet ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE DESASIGNACION_CURSO 
-    ADD CONSTRAINT DESASIGNACION_CURSO_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-     id_habilitar
-    ) 
+ALTER TABLE Desasignacion  ADD CONSTRAINT Desasignacion_HabilitarCurso_FK FOREIGN KEY ( HabilitarCurso_id_habilitar ) 
+    REFERENCES HabilitarCurso ( id_habilitar ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE ESTUDIANTE 
-    ADD CONSTRAINT ESTUDIANTE_CARRERA_FK FOREIGN KEY 
-    ( 
-     CARRERA_id_carrera
-    ) 
-    REFERENCES CARRERA 
-    ( 
-     id_carrera 
-    ) 
+ALTER TABLE Estudiante ADD CONSTRAINT Estudiante_Carrera_FK FOREIGN KEY ( Carrera_id_carrera ) 
+    REFERENCES Carrera  ( id_carrera ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE HABILITAR_CURSO 
-    ADD CONSTRAINT HABILITAR_CURSO_CURSO_FK FOREIGN KEY 
-    ( 
-     CURSO_id_curso
-    ) 
-    REFERENCES CURSO 
-    ( 
-     id_curso 
-    ) 
+ALTER TABLE HabilitarCurso ADD CONSTRAINT HabilitarCurso_Curso_FK FOREIGN KEY ( Curso_id_curso )  
+	REFERENCES Curso  ( id_curso ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE HABILITAR_CURSO 
-    ADD CONSTRAINT HABILITAR_CURSO_DOCENTE_FK FOREIGN KEY 
-    ( 
-     DOCENTE_siif
-    ) 
-    REFERENCES DOCENTE 
-    ( 
-     siif 
-    ) 
+ALTER TABLE HabilitarCurso ADD CONSTRAINT HabilitarCurso_Docente_FK FOREIGN KEY ( Docente_siif ) 
+    REFERENCES Docente( siif ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE HORARIO 
-    ADD CONSTRAINT HORARIO_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-     id_habilitar
-    ) 
+ALTER TABLE Horario ADD CONSTRAINT Horario_HabilitarCurso_FK FOREIGN KEY( HabilitarCurso_id_habilitar) 
+	REFERENCES HabilitarCurso ( id_habilitar) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE NOTA 
-    ADD CONSTRAINT NOTA_ESTUDIANTE_FK FOREIGN KEY 
-    ( 
-     ESTUDIANTE_carnet
-    ) 
-    REFERENCES ESTUDIANTE 
-    ( 
-     carnet 
-    ) 
+ALTER TABLE Nota ADD CONSTRAINT Nota_Estudiante_FK FOREIGN KEY( Estudiante_carnet)
+	REFERENCES Estudiante ( carnet ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
 
-ALTER TABLE NOTA 
-    ADD CONSTRAINT NOTA_HABILITAR_CURSO_FK FOREIGN KEY 
-    ( 
-     HABILITAR_CURSO_id_habilitar
-    ) 
-    REFERENCES HABILITAR_CURSO 
-    ( 
-    id_habilitar
-    ) 
+ALTER TABLE Nota ADD CONSTRAINT Nota_HabilitarCurso_FK FOREIGN KEY (  HabilitarCurso_id_habilitar ) 
+    REFERENCES HabilitarCurso ( id_habilitar ) 
     ON DELETE NO ACTION 
     ON UPDATE NO ACTION 
 ;
+
+
